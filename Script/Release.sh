@@ -1,13 +1,14 @@
 #!/bin/sh
 #source ../../PayUParamsKit/GitHub/Version.txt 2> /dev/null
-source <(curl -s https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt)
+#curl -s https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt -o ./Version.txt
+source ../Version.txt
 
 # Logs
 echo "$FS_YELLOW \n==> Release Script Started $FS_DEFAULT"
 cd ..
 
 # Local Variables
-podName="NEW_TEST"
+podName="test"
 podSpec="${podName}.podspec"
 tag=$CommonUI_POD_VERSION
 

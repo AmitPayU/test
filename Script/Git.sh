@@ -1,9 +1,9 @@
 #!/bin/sh
-source <(curl -s https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt)
+source ../Version.txt
 
 # Logs
 echo "$FS_YELLOW \n==> Git Script Started $FS_DEFAULT"
-cd ..
+cd ../GitHub
 
 # add
 command="git add ."

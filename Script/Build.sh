@@ -1,5 +1,5 @@
 #!/bin/sh
-source <(curl -s https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt)
+source ../Version.txt
 
 build_sdk () {
     
@@ -59,7 +59,7 @@ build_sdk () {
     echo "$FS_YELLOW \n==> Creating xcframework $FS_DEFAULT"
     
     # Removing an existing xcframework if exists
-    OUTPUT_DIRECTORY="./../GitHub/$1.xcframework"
+    OUTPUT_DIRECTORY="./framework/$1.xcframework"
     rm -rf $OUTPUT_DIRECTORY
     
     # XCFramework
