@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name                = "test"
-  s.version             = "1.0.0"
+  s.version             = "1.0.4"
   s.license             = "MIT"
   s.homepage            = "https://github.com/AmitPayU/test"
   s.author              = { "test" => "contact@test.in"  }
