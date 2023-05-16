@@ -1,7 +1,9 @@
+vars_from_file = File.read("./Version.txt")
+eval(vars_from_file)
 
 Pod::Spec.new do |s|
   s.name                = "test"
-  s.version             = "1.0.5"
+  s.version             = CommonUI_POD_VERSION
   s.license             = "MIT"
   s.homepage            = "https://github.com/AmitPayU/test"
   s.author              = { "test" => "contact@test.in"  }
@@ -15,5 +17,8 @@ Pod::Spec.new do |s|
   
   s.ios.deployment_target = "11.0"
   s.vendored_frameworks = "test.xcframework"
+NATIVE_OTP_ASSIST_PODSPEC_DEPENDENCIES.each do |dependency|
+    dependency
+end
 
 end
