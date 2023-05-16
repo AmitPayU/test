@@ -1,4 +1,6 @@
-vars_from_file = File.read("../Version.txt")
+require 'open-uri'
+
+vars_from_file = URI("https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt").read
 eval(vars_from_file)
 
 Pod::Spec.new do |s|
