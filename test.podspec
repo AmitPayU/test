@@ -1,29 +1,17 @@
-require 'net/http'
+require 'httparty'
 
-url = URI.parse('https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt')
-response = Net::HTTP.get_response(url)
+# Make the API request
+url = "https://api.github.com/repos/AmitPayU/test/contents/Script/Version.txt"
+response = HTTParty.get(url)
 
-if response.is_a?(Net::HTTPSuccess)
-  content = response.body
-
-  # Parse the content or extract variables
-  # based on the format of the remote file
-
-  # For example, if the file contains variables in key-value pairs
-  variables = {}
-  content.each_line do |line|
-    key, value = line.chomp.split('=')
-    variables[key] = value
-  end
-
-  # Use the extracted variables
-  variables.each do |key, value|
-    puts "#{key}: #{value}"
-  end
-  
-  puts content
+# Check if the request was successful
+if response.code == 200
+  # Extract the content from the response
+  content = Base64.decode64(response['content'])
+  # Evaluate the content of the file
+  eval(content)
 else
-  puts "Failed to retrieve the remote file. HTTP status code: #{response.code}"
+  puts "Failed to retrieve file. HTTP status code: #{response.code}"
 end
 
 Pod::Spec.new do |s|
