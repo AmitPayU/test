@@ -1,0 +1,157 @@
+# Xcode Log Msg
+ARCHIVE_SUCCESS_MSG="ARCHIVE SUCCEEDED"
+XCFRAMEWORK_SUCCESS_MSG="xcframework successfully written"
+
+# Release Config
+MAX_RETRY_COUNT="3"
+FIRST_LINT_RETRY_TIME_IN_SECONDS="1200"
+DEFAULT_LINT_RETRY_TIME_IN_SECONDS="300"
+
+# Font Style
+FS_DEFAULT="\033[00m"
+FS_YELLOW="\033[1;33m"
+FS_RED="\033[01;91m"
+FS_CYAN="\033[01;36m"
+FS_GREEN="\033[01;32m"
+
+# Swift Tool Version
+SWIFT_TOOL_VERSION="// swift-tools-version:5.5\n// The swift-tools-version declares the minimum version of Swift required to build this package."
+
+# ParamKit
+PARAMKIT_POD_VERSION="4.8.0"
+PARAMKIT_COMMIT_MESSAGE="Supported HDFC/ICICI Cardless EMI"
+
+# PayUNativeOtpAssist
+NATIVE_OTP_ASSIST_POD_VERSION="2.1.3"
+NATIVE_OTP_ASSIST_COMMIT_MESSAGE="Updated Scripts"
+
+NATIVE_OTP_ASSIST_PACKAGE_DEPENDENCIES=(
+'let VERSION_PARAM_KIT: PackageDescription.Version = "4.5.0"'
+'let VERSION_ANALYTICS_KIT: PackageDescription.Version = "3.0.0"'
+'let VERSION_CRASH_REPORTER: PackageDescription.Version = "2.1.0"'
+'let VERSION_NETWORK_REACHABILITY: PackageDescription.Version = "2.0.1"'
+)
+
+NATIVE_OTP_ASSIST_PODSPEC_DEPENDENCIES = [
+"s.dependency            'PayUIndia-PayUParams', '~>4.5'", 
+"s.dependency            'PayUIndia-Analytics', '~>3.0'", 
+"s.dependency            'PayUIndia-CrashReporter', '~>2.1'", 
+"s.dependency            'PayUIndia-NetworkReachability', '~>1.0'"
+]
+
+# PayUCheckoutProBase
+CHECKOUT_PRO_BASE_POD_VERSION="5.9.0"
+
+CHECKOUT_PRO_BASE_PODSPEC_DEPENDENCIES = [
+"s.dependency            'PayUIndia-PayUParams', '~>4.8'"
+]
+
+# PayUCheckoutPro
+CHECKOUT_PRO_POD_VERSION="5.9.0"
+CHECKOUT_PRO_COMMIT_MESSAGE="Supported HDFC/ICICI Cardless EMI"
+
+BUILD_CHECKOUT_PRO_AND_CHECKOUT_PRO_BASE=1
+BUILD_CHECKOUT_PRO_ONLY=0
+BUILD_CHECKOUT_PRO_BASE_ONLY=0
+
+CHECKOUT_PRO_PACKAGE_DEPENDENCIES=(
+'let VERSION_PARAM_KIT: PackageDescription.Version = "4.8.0"'
+'let VERSION_ANALYTICS_KIT: PackageDescription.Version = "3.0.0"'
+'let VERSION_CRASH_REPORTER: PackageDescription.Version = "2.1.0"'
+'let VERSION_NETWORK_REACHABILITY: PackageDescription.Version = "2.0.1"'
+'let VERSION_ASSET_LIBRARY: PackageDescription.Version = "3.3.0"'
+'let VERSION_PG_SDK: PackageDescription.Version = "9.2.0"'
+'let VERSION_CUSTOM_BROWSER: PackageDescription.Version = "9.2.0"'
+'let VERSION_NATIVE_OTP_ASSIST: PackageDescription.Version = "2.1.3"'
+'let VERSION_UPI_KIT: PackageDescription.Version = "7.1.1"'
+'let VERSION_CARD_SCANNER: PackageDescription.Version = "1.0.0"'
+)
+
+CHECKOUT_PRO_PODSPEC_DEPENDENCIES = [
+"s.dependency            'PayUIndia-CheckoutProBase', '~> 5.9'",
+"s.dependency            'PayUIndia-AssetLibrary', '~> 3.3'",
+"s.dependency            'PayUIndia-PG-SDK', '~> 9.2'",
+"s.dependency            'PayUIndia-UPICore', '~> 7.1'",
+"s.dependency            'PayUIndia-Custom-Browser', '~> 9.2'",
+"s.dependency            'PayUIndia-PayUParams', '~> 4.8'",
+"s.dependency            'PayUIndia-CrashReporter', '~> 2.1'",
+"s.dependency            'PayUIndia-NetworkReachability', '~> 1.0'",
+"s.dependency            'PayUIndia-NativeOtpAssist', '~> 2.1'",
+"s.dependency            'PayUIndia-CardScanner', '~> 1.0'",
+"s.dependency            'PayUIndia-Analytics', '3.0'"
+]
+
+# PayUAssetLibrary
+ASSET_LIBRARY_POD_VERSION="3.3.0"
+ASSET_LIBRARY_COMMIT_MESSAGE="Updated Script"
+
+# PayUCustomBrowser
+CUSTOM_BROWSER_POD_VERSION="9.2.0"
+CUSTOM_BROWSER_COMMIT_MESSAGE="Updated Script"
+
+CUSTOM_BROWSER_PACKAGE_DEPENDENCIES=(
+'let VERSION_ANALYTICS_KIT: PackageDescription.Version = "3.0.0"'
+)
+
+CUSTOM_BROWSER_PODSPEC_DEPENDENCIES = [
+"s.dependency            'PayUIndia-Analytics', '3.0'"
+]
+
+# PayULoggerKit
+LOGGER_KIT_POD_VERSION="4.0.0"
+
+# PayUNetworking
+NETWORKING_KIT_POD_VERSION="4.0.0"
+
+NETWORKING_KIT_PODSPEC_DEPENDENCIES = [
+"s.dependency            'PayUIndia-Logger', '4.0.0'"
+]
+
+# PayUUPICore
+UPI_CORE_POD_VERSION="7.1.1"
+UPI_CORE_COMMIT_MESSAGE="Updated Script"
+
+UPI_CORE_PACKAGE_DEPENDENCIES=(
+'let VERSION_PARAM_KIT: PackageDescription.Version = "4.5.0"'
+)
+
+UPI_CORE_PODSPEC_DEPENDENCIES = [
+"s.dependency            'PayUIndia-PayUParams', '~> 4.5'",
+"s.dependency            'PayUIndia-Networking', '~> 4.0'"
+]
+
+# PayUUPIKIT
+UPI_KIT_POD_VERSION="7.0.0"
+
+UPI_KIT_PODSPEC_DEPENDENCIES = [
+"s.dependency            'PayUIndia-UPICore', '~> 7.0'"
+]
+
+# Make sure to append sdk name in dependency order
+
+UPI_KIT_SDKS_NAMES=(
+'PayULoggerKit' 
+'PayUNetworkingKit' 
+'PayUUPICoreKit' 
+'PayUUPIKit'
+)
+
+UPI_KIT_SDKS_RELEASE_NAMES=(
+'PayUIndia-Logger' 
+'PayUIndia-Networking' 
+'PayUIndia-UPICore' 
+'PayUIndia-UPI'
+)
+
+UPI_KIT_SDKS_RELEASE_VERSIONS=(
+$LOGGER_KIT_POD_VERSION 
+$NETWORKING_KIT_POD_VERSION 
+$UPI_CORE_POD_VERSION 
+$UPI_KIT_POD_VERSION
+)
+
+UPI_KIT_SDKS_TO_BUILD=('0' '1' '2' '3')
+
+# PayUCommonUI
+CommonUI_POD_VERSION="1.0.0"
+CommonUI_COMMIT_MESSAGE="Updated Script"
