@@ -1,7 +1,30 @@
-require 'open-uri'
+require 'net/http'
 
-vars_from_file = URI("https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt").read
-eval(vars_from_file)
+url = URI.parse('https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt')
+response = Net::HTTP.get_response(url)
+
+if response.is_a?(Net::HTTPSuccess)
+  content = response.body
+
+  # Parse the content or extract variables
+  # based on the format of the remote file
+
+  # For example, if the file contains variables in key-value pairs
+  variables = {}
+  content.each_line do |line|
+    key, value = line.chomp.split('=')
+    variables[key] = value
+  end
+
+  # Use the extracted variables
+  variables.each do |key, value|
+    puts "#{key}: #{value}"
+  end
+  
+  puts content
+else
+  puts "Failed to retrieve the remote file. HTTP status code: #{response.code}"
+end
 
 Pod::Spec.new do |s|
   s.name                = "test"
