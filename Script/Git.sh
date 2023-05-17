@@ -1,5 +1,5 @@
 #!/bin/sh
-source ../Version.txt
+source ../../PayUParamsKit/GitHub/Version.txt
 
 # Logs
 echo "$FS_YELLOW \n==> Git Script Started $FS_DEFAULT"

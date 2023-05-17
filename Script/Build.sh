@@ -1,5 +1,5 @@
 #!/bin/sh
-source ../Version.txt
+source ../../PayUParamsKit/GitHub/Version.txt
 
 build_sdk () {
     

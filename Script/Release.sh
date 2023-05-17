@@ -1,7 +1,7 @@
 #!/bin/sh
 #source ../../PayUParamsKit/GitHub/Version.txt 2> /dev/null
 #curl -s https://github.com/payu-intrepos/payu-params-iOS/blob/main/Version.txt -o ./Version.txt
-source ../Version.txt
+source ../../PayUParamsKit/GitHub/Version.txt
 
 # Logs
 echo "$FS_YELLOW \n==> Release Script Started $FS_DEFAULT"
