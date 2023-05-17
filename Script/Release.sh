@@ -10,7 +10,7 @@ cd ..
 # Local Variables
 podName="test"
 podSpec="${podName}.podspec"
-tag=$CommonUI_POD_VERSION
+tag=$LOGGER_KIT_POD_VERSION
 
 # Msg
 SCRIPT_END_MSG="$FS_YELLOW \n==> Release Script Ended\n $FS_DEFAULT"
