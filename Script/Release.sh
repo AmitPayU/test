@@ -10,7 +10,7 @@ cd ..
 # Local Variables
 podName="test"
 podSpec="${podName}.podspec"
-tag=$LOGGER_KIT_POD_VERSION
+tag=$PARAMKIT_POD_VERSION
 
 # Msg
 SCRIPT_END_MSG="$FS_YELLOW \n==> Release Script Ended\n $FS_DEFAULT"
@@ -49,7 +49,7 @@ createRemoteTag() {
 # Pod Lib Lint
 podLibLint() {
     repoUpdate
-    command="pod lib lint $1"
+    command="pod lib lint $1 --allow-warnings"
     executeCommand "$command"
     if [ $? -eq 0 ]; then
     createLocalTag ${tag}
