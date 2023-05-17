@@ -23,7 +23,7 @@ $VERBOSE = original_verbose
 
 Pod::Spec.new do |s|
   s.name                = "test"
-  s.version             = CommonUI_POD_VERSION
+  s.version             = "1.1.0"
   s.license             = "MIT"
   s.homepage            = "https://github.com/AmitPayU/test"
   s.author              = { "test" => "contact@test.in"  }
