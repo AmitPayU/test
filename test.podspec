@@ -23,7 +23,7 @@ $VERBOSE = original_verbose
 
 Pod::Spec.new do |s|
   s.name                = "test"
-  s.version             = "1.1.0"
+  s.version             = LOGGER_KIT_POD_VERSION
   s.license             = "MIT"
   s.homepage            = "https://github.com/AmitPayU/test"
   s.author              = { "test" => "contact@test.in"  }
