@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
                           }
   
   s.ios.deployment_target = "11.0"
-  s.vendored_frameworks = "./test.xcframework"
+  s.vendored_frameworks = "framework/test.xcframework"
 NATIVE_OTP_ASSIST_PODSPEC_DEPENDENCIES.each do |dependency|
     dependency
 end
